@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio website of Harsh Panchal - Site Reliability and Platform Engineer showcasing experience, projects, and skills.">
+    <title>Harsh Panchal | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BlsY3xSxZ1a9G2lgfQArYwRkzFUU5FdG7GdJG8b7LT9ONV1X32T6lgj+7tMG8Llow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="logo" href="#top">HP</a>
+            <button class="nav__toggle" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Menu</span>
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav__links" id="primary-navigation">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero" aria-labelledby="intro-heading">
+            <div class="hero__content reveal">
+                <p class="hero__eyebrow">Site Reliability Analyst & Platform Engineer</p>
+                <h1 id="intro-heading">Harsh Panchal</h1>
+                <p class="hero__summary">
+                    I build reliable, scalable platforms and data systems. With hands-on experience across cloud-native infrastructure, automation, and performance engineering, I partner with teams to turn complex systems into resilient products.
+                </p>
+                <div class="hero__cta">
+                    <a class="btn btn--primary" href="mailto:harshpanchalv@gmail.com">Let's Collaborate</a>
+                    <!-- Update resume link once the PDF lives in the repository. -->
+                    <a class="btn btn--ghost" href="Harsh-Panchal-Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+                </div>
+                <ul class="hero__meta">
+                    <li><i class="fa-solid fa-location-dot"></i> Toronto, Ontario</li>
+                    <li><i class="fa-solid fa-graduation-cap"></i> BSc Computer Science, Ontario Tech University</li>
+                    <li><i class="fa-solid fa-diagram-project"></i> Performance Engineering, Cloud, Data Automation</li>
+                </ul>
+            </div>
+            <div class="hero__card reveal" role="presentation">
+                <div class="hero__card-body">
+                    <span class="badge">New Role</span>
+                    <h2>Site Reliability Analyst Intern</h2>
+                    <p class="hero__card-company">Sun Life Financial · Sept 2025 – Present</p>
+                    <ul>
+                        <li>Performance testing with OpenText VuGen & LoadRunner.</li>
+                        <li>Focused on reliability insights for 2K+ concurrent users.</li>
+                        <li>Advocating for TDD to elevate release quality.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    <section class="section reveal" id="about" aria-labelledby="about-heading">
+            <div class="section__header">
+                <p class="section__eyebrow">Profile</p>
+                <h2 id="about-heading">About</h2>
+            </div>
+            <div class="section__content section__content--split">
+                <p>
+                    I thrive at the intersection of infrastructure reliability and product velocity. Whether refining Kubernetes deployments, automating data pipelines, or designing cloud dashboards, I lean on clear metrics and collaborative execution. My internships across enterprise and public sector teams taught me how to ship resilient systems while navigating security, compliance, and cross-functional stakeholders.
+                </p>
+                <p>
+                    Outside of work, I keep sharpening my engineering toolkit by exploring Flutter for mobile experiences and experimenting with AI-assisted productivity tooling. I’m actively looking for opportunities where I can continue to improve system resilience while partnering with teams to deliver measurable business outcomes.
+                </p>
+            </div>
+        </section>
+
+    <section class="section section--accent reveal" id="skills" aria-labelledby="skills-heading">
+            <div class="section__header">
+                <p class="section__eyebrow">Core Toolbox</p>
+                <h2 id="skills-heading">Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <article class="skills-card">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Bash</li>
+                        <li>C/C++</li>
+                        <li>JavaScript / TypeScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>Dart</li>
+                        <li>SQL</li>
+                    </ul>
+                </article>
+                <article class="skills-card">
+                    <h3>Cloud & Platforms</h3>
+                    <ul>
+                        <li>Azure & Databricks</li>
+                        <li>Kubernetes & AKS</li>
+                        <li>Docker</li>
+                        <li>ServiceNow</li>
+                        <li>JFrog Artifactory</li>
+                    </ul>
+                </article>
+                <article class="skills-card">
+                    <h3>Engineering Practices</h3>
+                    <ul>
+                        <li>Site Reliability & Observability</li>
+                        <li>Performance & Load Testing</li>
+                        <li>Agile & Scrum Delivery</li>
+                        <li>Test-Driven Development</li>
+                        <li>Automation & Scripting</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+    <section class="section reveal" id="experience" aria-labelledby="experience-heading">
+            <div class="section__header">
+                <p class="section__eyebrow">Track Record</p>
+                <h2 id="experience-heading">Experience</h2>
+            </div>
+            <div class="timeline">
+                <article class="timeline__item reveal">
+                    <div class="timeline__marker"></div>
+                    <div class="timeline__content">
+                        <header>
+                            <h3>Site Reliability Analyst Intern</h3>
+                            <p class="timeline__meta">Sun Life Financial · Sept 2025 – Present · Toronto, ON</p>
+                        </header>
+                        <ul>
+                            <li>Develop performance test suites with OpenText VuGen to simulate real-world API load.</li>
+                            <li>Validate LoadRunner results for 2,000+ concurrent users to surface bottlenecks early.</li>
+                            <li>Champion TDD practices to reduce post-release incidents.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline__item reveal">
+                    <div class="timeline__marker"></div>
+                    <div class="timeline__content">
+                        <header>
+                            <h3>Data Engineer Intern</h3>
+                            <p class="timeline__meta">Ministry of Health (Ontario) · May 2024 – Aug 2024 · North York, ON</p>
+                        </header>
+                        <ul>
+                            <li>Managed 10+ datasets via Databricks and Azure Storage to streamline analytics workflows.</li>
+                            <li>Optimized Python and SQL ingestion pipelines, eliminating 100% of duplicate records across bronze, silver, and gold layers.</li>
+                            <li>Automated data catalog updates and environment variables, halving manual maintenance.</li>
+                            <li>Ensured security compliance for sensitive public health initiatives.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline__item reveal">
+                    <div class="timeline__marker"></div>
+                    <div class="timeline__content">
+                        <header>
+                            <h3>Platform Reliability Engineer Intern</h3>
+                            <p class="timeline__meta">Manulife Financial · Sept 2023 – Apr 2024 · Toronto, ON</p>
+                        </header>
+                        <ul>
+                            <li>Maintained 500+ repositories within JFrog Artifactory to keep delivery pipelines humming.</li>
+                            <li>Co-built an internal component status portal with Angular and YAML workflows for Azure deployments.</li>
+                            <li>Launched a Power Apps Cloud Community Hub adopted by 100+ employees.</li>
+                            <li>Tuned AKS resource allocation to improve autoscaling responsiveness.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    <section class="section section--accent reveal" id="projects" aria-labelledby="projects-heading">
+            <div class="section__header">
+                <p class="section__eyebrow">Selected Work</p>
+                <h2 id="projects-heading">Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <div class="project-card__meta">
+                        <span class="project-card__tag">Flutter</span>
+                        <span class="project-card__tag">Supabase</span>
+                        <span class="project-card__tag">SQLite</span>
+                    </div>
+                    <h3>HelloChef</h3>
+                    <p>
+                        Cooking-safety Android app delivering lessons, exercises, and interactive quizzes with a refined user experience.
+                    </p>
+                    <ul>
+                        <li>Implemented secure authentication with Supabase and Google Sign-In.</li>
+                        <li>Built achievement tracking and community features to sustain engagement.</li>
+                        <li>Optimized local storage using SQLite, cutting lesson load times by 50%.</li>
+                    </ul>
+                    <a class="project-card__link" href="https://github.com/harishkiru/HelloChef" target="_blank" rel="noopener">
+                        View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-card__meta">
+                        <span class="project-card__tag">Flutter</span>
+                        <span class="project-card__tag">GPT-4o</span>
+                        <span class="project-card__tag">Google Maps</span>
+                    </div>
+                    <h3>BrainWave</h3>
+                    <p>
+                        Intelligent note-taking app that fuses AI summarization with location-aware reminders to boost personal productivity.
+                    </p>
+                    <ul>
+                        <li>Enabled AI-powered suggestions to streamline recall and organization.</li>
+                        <li>Leveraged Google Maps API for real-time, location-based notifications.</li>
+                        <li>Designed folder, tagging, and search features for fast knowledge retrieval.</li>
+                    </ul>
+                    <a class="project-card__link" href="https://github.com/HarshPanchal01/BrainWave" target="_blank" rel="noopener">
+                        View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+    <section class="section reveal" id="education" aria-labelledby="education-heading">
+            <div class="section__header">
+                <p class="section__eyebrow">Foundations</p>
+                <h2 id="education-heading">Education</h2>
+            </div>
+            <div class="education-card">
+                <h3>University of Ontario Institute of Technology</h3>
+                <p class="education-card__meta">BSc Computer Science · Sept 2021 – Apr 2026 · Oshawa, ON</p>
+                <p>Relevant coursework: Analysis & Design of Algorithms, AI, Computational Science, Compilers, Database Systems, Information Visualization, Mobile Devices, Operating Systems.</p>
+            </div>
+        </section>
+
+    <section class="section section--accent reveal" id="contact" aria-labelledby="contact-heading">
+            <div class="section__header">
+                <p class="section__eyebrow">Get In Touch</p>
+                <h2 id="contact-heading">Contact</h2>
+            </div>
+            <div class="contact-grid">
+                <div>
+                    <p>
+                        I’m always open to discussing site reliability, platform engineering, and data reliability opportunities. Drop me a note about how I can help your team deliver reliable, measurable outcomes.
+                    </p>
+                </div>
+                <div class="contact-actions">
+                    <a class="contact-link" href="mailto:harshpanchalv@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        harshpanchalv@gmail.com
+                    </a>
+                    <a class="contact-link" href="https://www.github.com/HarshPanchal01" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </a>
+                    <a class="contact-link" href="https://www.linkedin.com/in/HarshPanchal01" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Harsh Panchal. Built with care and reliability in mind.</p>
+    </footer>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
