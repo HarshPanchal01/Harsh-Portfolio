@@ -7,7 +7,7 @@
     <title>Harsh Panchal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -35,18 +35,37 @@
                     I build reliable, observable infrastructure and automation that help teams launch with confidence. I’ve supported financial services and public sector organizations by improving performance testing, data quality, and cloud operations.
                 </p>
                 <div class="hero__actions">
-                    <a class="button" href="mailto:harshpanchalv@gmail.com">Email me</a>
-                    <!-- Replace with the hosted PDF when ready. -->
-                    <a class="button button--ghost" href="Harsh-Panchal-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+                    <a class="button button--ghost" href="assets/Harsh-Panchal-Resume.pdf" target="_blank" rel="noopener">Resume</a>
                 </div>
                 <ul class="hero__links">
-                    <li><a href="https://www.github.com/HarshPanchal01" target="_blank" rel="noopener">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/HarshPanchal01" target="_blank" rel="noopener">LinkedIn</a></li>
-                    <li><a href="mailto:harshpanchalv@gmail.com">Email</a></li>
+                    <li>
+                        <a class="icon-link" href="https://www.github.com/HarshPanchal01" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.11.79-.25.79-.56v-1.95c-3.34.73-4.04-1.6-4.04-1.6-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.18.08 1.81 1.2 1.81 1.2 1.04 1.79 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.67-.3-5.48-1.34-5.48-5.95 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.64.25 2.86.13 3.16.77.84 1.23 1.91 1.23 3.22 0 4.62-2.82 5.64-5.5 5.93.42.36.8 1.08.8 2.18v3.23c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+                            </svg>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link" href="https://www.linkedin.com/in/HarshPanchal01" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M4.5 3a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 8.75h3v12.25H3V8.75Zm6.25 0h2.87v1.67h.04c.4-.75 1.38-1.55 2.84-1.55 3.03 0 3.59 1.99 3.59 4.58v6.55h-3v-5.81c0-1.39-.03-3.18-1.94-3.18-1.94 0-2.23 1.52-2.23 3.08v5.91h-3V8.75Z"/>
+                            </svg>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link" href="mailto:harshpanchalv@gmail.com" aria-label="Email">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M3.5 5h17a2.5 2.5 0 0 1 2.5 2.5v9a2.5 2.5 0 0 1-2.5 2.5h-17A2.5 2.5 0 0 1 1 16.5v-9A2.5 2.5 0 0 1 3.5 5Zm0 2c-.28 0-.5.22-.5.5v.3l8.5 5.1 8.5-5.11v-.29c0-.28-.22-.5-.5-.5h-16Zm16 11c.28 0 .5-.22.5-.5v-7.09l-7.96 4.79a1 1 0 0 1-1.08 0L3 10.41V17.5c0 .28.22.5.5.5h16Z"/>
+                            </svg>
+                            <span class="sr-only">Email</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <div class="hero__avatar" role="presentation" aria-hidden="true">
-                <span>HP</span>
+            <div class="hero__avatar">
+                <img src="assets/profile.jpg" alt="Harsh Panchal portrait">
             </div>
         </section>
 
@@ -55,40 +74,47 @@
                 <h2 id="experience-heading">Where I’ve been</h2>
                 <p>I focus on reliability, data integrity, and cloud tooling across enterprise environments.</p>
             </div>
-            <div class="card-list">
-                <article class="card">
-                    <div class="card__heading">
-                        <h3>Sun Life Financial</h3>
-                        <span class="card__meta">Site Reliability Analyst Intern · Sept 2025 – Present</span>
+            <div class="experience-list">
+                <a class="experience-card" href="https://www.sunlife.com" target="_blank" rel="noopener">
+                    <div class="experience-card__logo">
+                        <img src="assets/sunlife.png" alt="Sun Life Financial logo">
                     </div>
-                    <ul>
-                        <li>Ship performance tests with OpenText VuGen and LoadRunner that replicate 2K+ concurrent users.</li>
-                        <li>Translate load test telemetry into reliability insights the platform team can action quickly.</li>
-                        <li>Introduce TDD habits that reduce deployment regressions.</li>
-                    </ul>
-                </article>
-                <article class="card">
-                    <div class="card__heading">
-                        <h3>Government of Ontario · Ministry of Health</h3>
-                        <span class="card__meta">Data Engineer Intern · May 2024 – Aug 2024</span>
+                    <div class="experience-card__body">
+                        <h3>Sun Life</h3>
+                        <p>Site Reliability Analyst Intern</p>
                     </div>
-                    <ul>
-                        <li>Automated data ingestion and deduplication across bronze, silver, and gold layers using Python and SQL.</li>
-                        <li>Leverage Databricks and Azure Storage to manage double-digit datasets with strong governance.</li>
-                        <li>Cut manual catalog updates in half by scripting metadata refreshes and environment variables.</li>
-                    </ul>
-                </article>
-                <article class="card">
-                    <div class="card__heading">
-                        <h3>Manulife Financial</h3>
-                        <span class="card__meta">Platform Reliability Engineer Intern · Sept 2023 – Apr 2024</span>
+                    <span class="experience-card__date">Sept 2025 – Present</span>
+                </a>
+                <a class="experience-card" href="https://www.ontario.ca/page/ministry-health" target="_blank" rel="noopener">
+                    <div class="experience-card__logo">
+                        <img src="assets/ontariohealth.jpeg" alt="Government of Ontario Ministry of Health logo">
                     </div>
-                    <ul>
-                        <li>Maintained 500+ repositories in JFrog Artifactory to safeguard build pipelines.</li>
-                        <li>Built an internal component status portal with Angular and Azure-backed workflows.</li>
-                        <li>Optimized AKS resources to improve scaling responsiveness for business-critical apps.</li>
-                    </ul>
-                </article>
+                    <div class="experience-card__body">
+                        <h3>Ontario Health</h3>
+                        <p>Data Engineer Intern</p>
+                    </div>
+                    <span class="experience-card__date">May 2024 – Aug 2024</span>
+                </a>
+                <a class="experience-card" href="https://www.manulife.com" target="_blank" rel="noopener">
+                    <div class="experience-card__logo">
+                        <img src="assets/manulife.jpeg" alt="Manulife logo">
+                    </div>
+                    <div class="experience-card__body">
+                        <h3>Manulife</h3>
+                        <p>Platform Reliability Engineer Intern</p>
+                    </div>
+                    <span class="experience-card__date">Sept 2023 – Apr 2024</span>
+                </a>
+                <a class="experience-card" href="https://www.eclipsecreations.com" target="_blank" rel="noopener">
+                    <div class="experience-card__logo">
+                        <img src="assets/eclipsecreations.jpg" alt="Eclipse Creations logo">
+                    </div>
+                    <div class="experience-card__body">
+                        <h3>Eclipse Creations</h3>
+                        <p>Full Stack Developer Intern</p>
+                    </div>
+                    <span class="experience-card__date">May 2023 - Aug 2023</span>
+                </a>
             </div>
         </section>
 
@@ -141,6 +167,13 @@
     <footer class="footer">
         <p>Made with care by Harsh Panchal · <span id="year"></span></p>
     </footer>
+
+    <button class="scroll-top" type="button" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 5a1 1 0 0 0-.71.29l-7 7a1 1 0 0 0 1.42 1.42L12 7.41l6.29 6.3a1 1 0 0 0 1.42-1.42l-7-7A1 1 0 0 0 12 5Z"/>
+            <path d="M12 11a1 1 0 0 0-.71.29l-7 7a1 1 0 0 0 1.42 1.42L12 13.41l6.29 6.3a1 1 0 0 0 1.42-1.42l-7-7A1 1 0 0 0 12 11Z"/>
+        </svg>
+    </button>
 
     <script src="script.js"></script>
 </body>
