@@ -7,7 +7,7 @@
     <title>Harsh Panchal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -123,31 +123,25 @@
                 <h2 id="projects-heading">Things I’ve built</h2>
                 <p>Side projects where I explore mobile experiences, AI-assisted tooling, and reliability patterns.</p>
             </div>
-            <div class="card-list card-list--split">
-                <article class="card card--project">
-                    <h3>HelloChef</h3>
-                    <p class="card__meta">Flutter · Supabase · SQLite</p>
-                    <p>
-                        Cooking-safety Android app with interactive lessons and community achievements that keep learners engaged.
-                    </p>
-                    <ul>
-                        <li>Secure auth via Supabase and Google Sign-In.</li>
-                        <li>On-device caching trims lesson load times by 50%.</li>
-                    </ul>
-                    <a class="card__link" href="https://github.com/harishkiru/HelloChef" target="_blank" rel="noopener">View on GitHub</a>
-                </article>
-                <article class="card card--project">
-                    <h3>BrainWave</h3>
-                    <p class="card__meta">Flutter · GPT-4o · Google Maps</p>
-                    <p>
-                        Intelligent note-taking companion combining AI summarization with location-aware reminders for busy students.
-                    </p>
-                    <ul>
-                        <li>Delivers smart prompts and knowledge organization helpers.</li>
-                        <li>Supports 100+ live reminders with geofenced alerts.</li>
-                    </ul>
-                    <a class="card__link" href="https://github.com/HarshPanchal01/BrainWave" target="_blank" rel="noopener">View on GitHub</a>
-                </article>
+            <div class="projects-grid">
+                <a class="project-card" href="https://github.com/harishkiru/HelloChef" target="_blank" rel="noopener">
+                    <div class="project-card__media">
+                        <img src="assets/hellochef.png" alt="HelloChef app preview">
+                    </div>
+                    <div class="project-card__body">
+                        <h3>HelloChef</h3>
+                        <p>Interactive cooking-safety lessons and challenges built with Flutter, backed by Supabase and SQLite.</p>
+                    </div>
+                </a>
+                <a class="project-card" href="https://github.com/HarshPanchal01/BrainWave" target="_blank" rel="noopener">
+                    <div class="project-card__media">
+                        <img src="assets/brainwave.png" alt="BrainWave app preview">
+                    </div>
+                    <div class="project-card__body">
+                        <h3>BrainWave</h3>
+                        <p>AI-assisted note taking with smart suggestions and location-aware reminders for busy students.</p>
+                    </div>
+                </a>
             </div>
         </section>
 
@@ -156,16 +150,30 @@
                 <h2 id="contact-heading">Let’s collaborate</h2>
                 <p>Reach out if you’re building dependable infrastructure, data platforms, or developer tooling.</p>
             </div>
-            <div class="contact">
-                <a class="contact__item" href="mailto:harshpanchalv@gmail.com">harshpanchalv@gmail.com</a>
-                <a class="contact__item" href="https://www.github.com/HarshPanchal01" target="_blank" rel="noopener">github.com/HarshPanchal01</a>
-                <a class="contact__item" href="https://www.linkedin.com/in/HarshPanchal01" target="_blank" rel="noopener">linkedin.com/in/HarshPanchal01</a>
-            </div>
+            <form class="contact-form" action="https://formsubmit.co/harshpanchalv@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Portfolio contact">
+                <input type="hidden" name="_captcha" value="false">
+                <div class="contact-form__grid">
+                    <div class="contact-form__field">
+                        <label for="contact-name">Name</label>
+                        <input id="contact-name" name="name" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="contact-form__field">
+                        <label for="contact-email">Email</label>
+                        <input id="contact-email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                </div>
+                <div class="contact-form__field">
+                    <label for="contact-message">How can I help?</label>
+                    <textarea id="contact-message" name="message" placeholder="Share a bit about the opportunity..." required></textarea>
+                </div>
+                <button class="button contact-form__submit" type="submit">Send message</button>
+            </form>
         </section>
     </main>
 
     <footer class="footer">
-        <p>Made with care by Harsh Panchal · <span id="year"></span></p>
+        <p>© <span id="year"></span> Made with 🫶 by Harsh Panchal</p>
     </footer>
 
     <button class="scroll-top" type="button" aria-label="Scroll to top">

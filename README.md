@@ -4,7 +4,7 @@ This repository hosts my personal portfolio site tailored for recruiters and eng
 
 ### Tech Stack
 - Static site powered by HTML5, modern CSS, and a touch of vanilla JavaScript.
-- Responsive layout optimized for desktop and mobile, using the Montserrat typeface from Google Fonts.
+- Responsive layout optimized for desktop and mobile, using the Roboto typeface from Google Fonts.
 - Sticky navigation, icon links, and smooth scroll affordances for a polished browsing experience.
 
 ### Local Development
@@ -22,5 +22,6 @@ This repository hosts my personal portfolio site tailored for recruiters and eng
 - Replace `src/assets/profile.jpg` with your own headshot; aim for a square image so the circular crop looks clean.
 - Update project cards or experience entries directly in `src/index.html` to keep the content fresh.
 - Update the company logo images in `src/assets/` to match the brands you showcase.
+- The contact form posts to FormSubmit; swap the `action` attribute in `src/index.html` if you use a different email or service.
 
 Questions or suggestions? Reach out at [harshpanchalv@gmail.com](mailto:harshpanchalv@gmail.com).
