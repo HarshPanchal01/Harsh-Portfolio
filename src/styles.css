@@ -360,7 +360,7 @@ textarea:focus-visible {
 }
 
 .project-card__media--brainwave {
-    background: rgb(12, 103, 139);
+    background: rgb(188, 236, 255);
     border-bottom: 1px solid rgba(37, 99, 235, 0.28);
 }
 
