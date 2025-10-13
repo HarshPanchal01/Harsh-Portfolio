@@ -67,18 +67,19 @@ textarea:focus-visible {
 
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: 16px;
     left: 16px;
     padding: 8px 16px;
     background: var(--text);
     color: #fff;
     border-radius: 6px;
-    transition: top 0.2s ease;
+    transform: translateY(-140%);
+    transition: transform 0.2s ease;
     z-index: 1000;
 }
 
 .skip-link:focus {
-    top: 16px;
+    transform: translateY(0);
 }
 
 .topbar {
