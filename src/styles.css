@@ -185,6 +185,18 @@ textarea:focus-visible {
     border-color: var(--accent);
 }
 
+.button--inverted {
+    background: #fff;
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.button--inverted:hover,
+.button--inverted:focus {
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--accent);
+}
+
 .hero__links {
     list-style: none;
     padding: 0;
@@ -206,10 +218,11 @@ textarea:focus-visible {
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.icon-link svg {
+.icon-link img {
     width: 22px;
     height: 22px;
-    fill: var(--text);
+    display: block;
+    color: var(--text);
 }
 
 .icon-link:hover,
@@ -313,10 +326,11 @@ textarea:focus-visible {
 }
 
 .project-card:hover,
-.project-card:focus-visible {
-    transform: translateY(-4px);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18), 0 24px 50px rgba(15, 23, 42, 0.16);
-    outline: none;
+.project-card:focus {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.18);
+    text-decoration: none;
 }
 
 .project-card__media {
