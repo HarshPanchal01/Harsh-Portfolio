@@ -126,6 +126,7 @@ textarea:focus-visible {
     gap: 48px;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
+    scroll-margin-top: 120px;
 }
 
 .hero__eyebrow {
@@ -253,6 +254,7 @@ textarea:focus-visible {
 
 .section {
     margin-top: 96px;
+    scroll-margin-top: 120px;
 }
 
 .section__header {
@@ -353,12 +355,12 @@ textarea:focus-visible {
 }
 
 .project-card__media--hellochef {
-    background: rgba(34, 197, 94, 0.22);
+    background: rgb(2, 110, 42);
     border-bottom: 1px solid rgba(34, 197, 94, 0.28);
 }
 
 .project-card__media--brainwave {
-    background: rgba(37, 99, 235, 0.22);
+    background: rgb(12, 103, 139);
     border-bottom: 1px solid rgba(37, 99, 235, 0.28);
 }
 
