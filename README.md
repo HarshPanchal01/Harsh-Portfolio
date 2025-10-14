@@ -1,4 +1,4 @@
-## Harsh Panchal · Portfolio Source
+## Portfolio Source
 
 This repository contains the source code that powers **[harshpanchal.xyz](https://harshpanchal.xyz)**, my personal portfolio. The site showcases my experience across site reliability, platform engineering, data systems, and the projects I’m most proud of.
 
