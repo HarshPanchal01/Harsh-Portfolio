@@ -37,6 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # Upload the contents of the 'src' directory to GitHub Pages
           path: 'src/.'
       - name: Deploy to GitHub Pages
         id: deployment
