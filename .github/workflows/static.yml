@@ -3,9 +3,10 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches:
-      - main
-      
+    # Trigger deployment only on changes to the 'src' directory on the main branch
+    branches: ['main']
+    paths: ['src/**']
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
