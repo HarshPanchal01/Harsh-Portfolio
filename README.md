@@ -9,3 +9,5 @@ Key elements featured on the live site:
 - Contact form routed through FormSubmit.
 
 The codebase is intentionally lightweight with vanilla HTML, CSS, and JavaScript which keeps the site fast and easy to maintain.
+
+Want to remake this after this sem with a new idea. OS themed for all, Mac, Windows, Ubuntu Mint, Arch.
