@@ -1,13 +1,42 @@
-## Portfolio Source Code
+# sv
 
-This repository contains the source code that powers **[harshpanchal.xyz](https://harshpanchal.xyz)**, my personal portfolio. The site showcases my experience across site reliability, platform engineering, data systems, and the projects I’m most proud of.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-Key elements featured on the live site:
-- resume download, social links, and a personal introduction.
-- Experience timeline covering all my roles.
-- Highlighted my favourite projects.
-- Contact form routed through FormSubmit.
+## Creating a project
 
-The codebase is intentionally lightweight with vanilla HTML, CSS, and JavaScript which keeps the site fast and easy to maintain.
+If you're seeing this, you've probably already done this step. Congrats!
 
-Want to remake this after this sem with a new idea. OS themed for all, Mac, Windows, Ubuntu Mint, Arch.
+```sh
+# create a new project
+npx sv create my-app
+```
+
+To recreate this project with the same configuration:
+
+```sh
+# recreate this project
+npx sv create --template minimal --types ts --no-install temp-svelte
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```sh
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
