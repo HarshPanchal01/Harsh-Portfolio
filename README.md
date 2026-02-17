@@ -1,26 +1,26 @@
-# sv
+# Harsh Panchal Portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A modern, terminal-style portfolio built with SvelteKit, featuring a Night Owl dark theme and a clean white + rose red light theme.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv create --template minimal --types ts --no-install temp-svelte
-```
+- 🎨 **Dual Theme Support**: Night Owl (dark) and White + Rose Red (light) themes
+- ⌨️ **Terminal Aesthetic**: Monospace font (JetBrains Mono) with terminal-style UI
+- ⚡ **SvelteKit**: Modern framework for blazing-fast performance
+- 📱 **Responsive Design**: Optimized for all screen sizes
+- 🎭 **Typing Animation**: Dynamic hero section with typewriter effect
+- 📊 **Experience Timeline**: Vertical timeline showcasing work history
+- 🚀 **Featured Projects**: Showcase of key projects
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Install dependencies:
+
+```sh
+npm install
+```
+
+Start development server:
 
 ```sh
 npm run dev
@@ -38,5 +38,9 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
+
+## Deployment
+
+This portfolio can be deployed to any static hosting platform that supports SvelteKit.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
