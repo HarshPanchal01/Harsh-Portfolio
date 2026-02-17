@@ -95,15 +95,15 @@
 
 <div class="container mx-auto px-6 py-12 max-w-6xl">
 	<!-- Hero Section -->
-	<section id="top" class="mb-24">
+	<section id="top" class="mb-16 md:mb-24">
 		<div class="max-w-4xl">
-			<h1 class="text-5xl md:text-6xl font-bold mb-6 text-[var(--text-accent)]">
+			<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[var(--text-accent)]">
 				<span class="terminal-text">{displayText}</span>
 				{#if cursorVisible}
-					<span class="inline-block w-3 h-12 bg-[var(--text-accent)] ml-1 blink"></span>
+					<span class="inline-block w-2 md:w-3 h-10 md:h-12 bg-[var(--text-accent)] ml-1 blink"></span>
 				{/if}
 			</h1>
-			<div class="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+			<div class="space-y-4 text-base md:text-lg text-[var(--text-secondary)] leading-relaxed">
 				<p>
 					Thanks for visiting my site! I'm currently in my final year studying Computer Science at Ontario Tech University, 
 					looking to further my software engineering experience with a focus in <span class="text-[var(--accent-cyan)] font-semibold">software engineering</span>, 
@@ -121,7 +121,7 @@
 					href="/assets/Harsh_Panchal_Resume_2025.pdf" 
 					target="_blank" 
 					rel="noopener"
-					class="px-6 py-3 bg-[var(--text-accent)] text-[var(--bg-primary)] rounded-md font-semibold hover:opacity-90 transition-opacity border-2 border-[var(--text-accent)]"
+					class="px-5 md:px-6 py-2.5 md:py-3 bg-[var(--text-accent)] text-[var(--bg-primary)] rounded-md font-semibold hover:opacity-90 transition-opacity border-2 border-[var(--text-accent)] text-sm md:text-base"
 				>
 					Download Resume
 				</a>
@@ -137,7 +137,7 @@
 						aria-label={link.name}
 						class="w-12 h-12 rounded-full border border-[var(--border-color)] flex items-center justify-center hover:border-[var(--text-accent)] transition-colors bg-[var(--bg-secondary)]"
 					>
-						<img src={link.icon} alt={link.name} class="w-6 h-6" />
+						<img src={link.icon} alt={link.name} class="w-5 h-5 opacity-80" style="filter: brightness(0) saturate(100%) invert(var(--icon-invert, 0));" />
 					</a>
 				{/each}
 			</div>
@@ -145,12 +145,12 @@
 	</section>
 
 	<!-- Experience Timeline Section -->
-	<section id="experience" class="mb-24">
-		<div class="mb-12">
-			<h2 class="text-4xl font-bold mb-4 text-[var(--text-primary)]">
+	<section id="experience" class="mb-16 md:mb-24">
+		<div class="mb-8 md:mb-12">
+			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-[var(--text-primary)]">
 				<span class="text-[var(--accent-green)]"># </span>Experience Timeline
 			</h2>
-			<p class="text-[var(--text-secondary)]">
+			<p class="text-sm md:text-base text-[var(--text-secondary)]">
 				I focus on reliability, data integrity, and cloud tooling across enterprise environments.
 			</p>
 		</div>
@@ -193,12 +193,12 @@
 	</section>
 
 	<!-- Projects Section -->
-	<section id="projects" class="mb-24">
-		<div class="mb-12">
-			<h2 class="text-4xl font-bold mb-4 text-[var(--text-primary)]">
+	<section id="projects" class="mb-16 md:mb-24">
+		<div class="mb-8 md:mb-12">
+			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-[var(--text-primary)]">
 				<span class="text-[var(--accent-green)]"># </span>Featured Projects
 			</h2>
-			<p class="text-[var(--text-secondary)]">
+			<p class="text-sm md:text-base text-[var(--text-secondary)]">
 				Side projects where I explore mobile development, automation, and cloud platforms.
 			</p>
 		</div>

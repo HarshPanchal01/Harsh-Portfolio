@@ -15,6 +15,7 @@
   --accent-yellow: #ffcb8b;
   --accent-red: #ef5350;
   --accent-pink: #c792ea;
+  --icon-invert: 1;
 }
 
 /* Light Mode Colors (White + Rose Red) */
@@ -31,6 +32,7 @@
   --accent-yellow: #f59e0b;
   --accent-red: #be123c;
   --accent-pink: #ec4899;
+  --icon-invert: 0;
 }
 
 :root {
