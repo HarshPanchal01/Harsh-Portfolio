@@ -12,7 +12,7 @@ const projects = [
     title: "OneFinance",
     description:
       "Local-first finance desktop app built with Electron, Vue 3, and SQLite.",
-    link: "https://github.com/HarshPanchal01/OneFinancehttps://github.com/HarshPanchal01/OneFinance",
+    link: "https://github.com/HarshPanchal01/OneFinance",
     tech: ["Electron", "Vue 3", "SQLite", "Pinia", "PrimeVue", "Tailwind CSS"],
     gifs: [
       "/assets/createAccounts-ezgif.com-video-to-gif-converter.gif",
