@@ -1,37 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  /* Light Mode - White + Rose Red */
-  --background: #ffffff;
-  --foreground: #1f2937; /* Gray 800 */
-  --accent: #e11d48; /* Rose 600 */
-  --accent-hover: #be123c; /* Rose 700 */
-  --muted: #6b7280; /* Gray 500 */
-  --card-bg: #ffffff;
-  --border: #e5e7eb; /* Gray 200 */
+  /* Night Owl Light */
+  --background: #fbfbfb; /* Light background from screenshot/repo */
+  --foreground: #403f53; /* Dark gray text */
+  --accent: #4876d6; /* Blue for functions/links */
+  --accent-hover: #2c56a8;
+  --muted: #989fb1; /* Comment gray */
+  --card-bg: #fbfbfb;
+  --border: #d6deeb; /* Light border */
 
-  /* Syntax Highlighting / Accents */
-  --color-green: #059669; /* Emerald 600 */
-  --color-purple: #7c3aed; /* Violet 600 */
-  --color-yellow: #d97706; /* Amber 600 */
-  --color-blue: #2563eb; /* Blue 600 */
+  /* Syntax Highlighting */
+  --color-keyword: #994cc3; /* Purple for keywords (class, const) */
+  --color-string: #c96765; /* Red/Orange for strings */
+  --color-function: #4876d6; /* Blue for functions */
+  --color-number: #aa0982; /* Pink/Purple for numbers */
+  --color-comment: #989fb1; /* Gray for comments */
 }
 
 .dark {
-  /* Night Owl Theme */
-  --background: #011627;
-  --foreground: #d6deeb;
-  --accent: #82AAFF; /* Night Owl Blue */
+  /* Night Owl Dark */
+  --background: #011627; /* Deep blue background */
+  --foreground: #d6deeb; /* Light blue-gray text */
+  --accent: #82AAFF; /* Light blue for functions/links */
   --accent-hover: #6290ff;
-  --muted: #637777;
+  --muted: #637777; /* Comment gray-green */
   --card-bg: #011627;
-  --border: #1e2d3d; /* Darker border */
+  --border: #5f7e97; /* Blue-gray border */
 
-  /* Syntax Highlighting / Accents (Night Owl) */
-  --color-green: #addb67;
-  --color-purple: #c792ea;
-  --color-yellow: #ecc48d;
-  --color-blue: #82AAFF;
+  /* Syntax Highlighting */
+  --color-keyword: #c792ea; /* Purple for keywords */
+  --color-string: #ecc48d; /* Yellow/Gold for strings */
+  --color-function: #82AAFF; /* Blue for functions */
+  --color-number: #F78C6C; /* Orange for numbers */
+  --color-comment: #637777; /* Gray-green for comments */
 }
 
 @theme inline {
@@ -43,10 +45,11 @@
   --color-card-bg: var(--card-bg);
   --color-border: var(--border);
 
-  --color-syntax-green: var(--color-green);
-  --color-syntax-purple: var(--color-purple);
-  --color-syntax-yellow: var(--color-yellow);
-  --color-syntax-blue: var(--color-blue);
+  --color-syntax-keyword: var(--color-keyword);
+  --color-syntax-string: var(--color-string);
+  --color-syntax-function: var(--color-function);
+  --color-syntax-number: var(--color-number);
+  --color-syntax-comment: var(--color-comment);
 
   --font-mono: var(--font-jetbrains-mono);
 }

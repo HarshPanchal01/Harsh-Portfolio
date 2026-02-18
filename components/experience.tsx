@@ -10,7 +10,6 @@ const experiences = [
     company: "Sun Life",
     role: "Site Reliability Analyst Intern",
     date: "Sept 2025 – Present",
-    logo: "/assets/sunlife.png",
     link: "https://www.sunlife.com",
     description: "Site Reliability Analyst Intern",
   },
@@ -19,7 +18,6 @@ const experiences = [
     company: "Ontario Health",
     role: "Data Engineer Intern",
     date: "May 2024 – Aug 2024",
-    logo: "/assets/ontariohealth.jpeg",
     link: "https://www.ontario.ca/page/ministry-health",
     description: "Data Engineer Intern",
   },
@@ -28,7 +26,6 @@ const experiences = [
     company: "Manulife",
     role: "Platform Reliability Engineer Intern",
     date: "Sept 2023 – Apr 2024",
-    logo: "/assets/manulife.jpeg",
     link: "https://www.manulife.com",
     description: "Platform Reliability Engineer Intern",
   },
@@ -37,7 +34,6 @@ const experiences = [
     company: "Eclipse Creations",
     role: "Full Stack Developer Intern",
     date: "May 2023 - Aug 2023",
-    logo: "/assets/eclipsecreations.jpg",
     link: "https://www.linkedin.com/company/eclipse-creations01",
     description: "Full Stack Developer Intern",
   },
@@ -52,11 +48,13 @@ export function Experience() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="mb-12 font-mono text-3xl font-bold text-accent">
-          &lt;Experience /&gt;
+        <h2 className="mb-12 font-mono text-3xl font-bold text-accent flex items-center gap-2">
+           <span className="text-syntax-keyword">&lt;</span>
+           Experience
+           <span className="text-syntax-keyword"> /&gt;</span>
         </h2>
 
-        <div className="relative border-l-2 border-muted/30 ml-3 md:ml-6 space-y-12">
+        <div className="relative border-l-2 border-border ml-3 md:ml-6 space-y-12">
           {experiences.map((exp) => (
             <div key={exp.id} className="relative pl-8 md:pl-12">
               {/* Timeline Dot */}
@@ -80,11 +78,6 @@ export function Experience() {
                 <h4 className="font-mono text-lg font-medium text-foreground/80 mb-2">
                   {exp.role}
                 </h4>
-
-                {/* Logo or Description if needed */}
-                <div className="mt-2 text-muted">
-                 {/*  <p>{exp.description}</p> */ }
-                </div>
               </Link>
             </div>
           ))}
