@@ -11,7 +11,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Harsh Panchal",
-  description: "Harsh Panchal is a developer and computer science student at Ontario Tech University, passionate about software engineering, cloud platforms, automation, and tech for creatives.",
+  description: "Harsh Panchal is a professionaldeveloper and computer science student at Ontario Tech University, passionate about software engineering, cloud platforms, and automation.",
   icons: {
     icon: "/favicon.svg",
   },
