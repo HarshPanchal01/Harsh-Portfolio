@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  /* Light Mode - White + Rose Red */
+  --background: #ffffff;
+  --foreground: #1f2937; /* Gray 800 */
+  --accent: #e11d48; /* Rose 600 */
+  --accent-hover: #be123c; /* Rose 700 */
+  --muted: #6b7280; /* Gray 500 */
+  --card-bg: #ffffff;
+  --border: #e5e7eb; /* Gray 200 */
+
+  /* Syntax Highlighting / Accents */
+  --color-green: #059669; /* Emerald 600 */
+  --color-purple: #7c3aed; /* Violet 600 */
+  --color-yellow: #d97706; /* Amber 600 */
+  --color-blue: #2563eb; /* Blue 600 */
+}
+
+.dark {
+  /* Night Owl Theme */
+  --background: #011627;
+  --foreground: #d6deeb;
+  --accent: #82AAFF; /* Night Owl Blue */
+  --accent-hover: #6290ff;
+  --muted: #637777;
+  --card-bg: #011627;
+  --border: #1e2d3d; /* Darker border */
+
+  /* Syntax Highlighting / Accents (Night Owl) */
+  --color-green: #addb67;
+  --color-purple: #c792ea;
+  --color-yellow: #ecc48d;
+  --color-blue: #82AAFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-card-bg: var(--card-bg);
+  --color-border: var(--border);
+
+  --color-syntax-green: var(--color-green);
+  --color-syntax-purple: var(--color-purple);
+  --color-syntax-yellow: var(--color-yellow);
+  --color-syntax-blue: var(--color-blue);
+
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jetbrains-mono), monospace;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
