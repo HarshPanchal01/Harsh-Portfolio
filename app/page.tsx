@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="container mx-auto max-w-5xl px-6">
+      <main className="container mx-auto max-w-6xl px-4 sm:px-6">
         <Hero />
         <Experience />
         <Projects />

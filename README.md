@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Harsh-Portfolio
 
-## Getting Started
+Personal portfolio website built with Next.js App Router, TypeScript, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js 16 (App Router)
+- React 19 + TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- `next-themes` for dark/light theming based on night owl theme by Sarah Drasner
+
+## Local Development
+
+### 1) Install dependencies
+
+```bash
+npm ci
+```
+
+### 2) Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Starts the local development server
+- `npm run build` - Builds the production static export into `out/`
+- `npm run start` - Runs the production server (mainly for non-export deployments)
+- `npm run lint` - Runs ESLint
 
-## Learn More
+## Production Build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project uses static export (`output: "export"`), so the build generates a static `out/` directory.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment (GitHub Pages)
 
-## Deploy on Vercel
+Deployment is automated via GitHub Actions using `.github/workflows/static.yml`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Trigger: push to `main` (or manual `workflow_dispatch`)
+- Build: `npm ci` + `npm run build`
+- Artifact: uploads `out/`
+- Deploy: uses `actions/deploy-pages`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`next.config.ts` is configured with dynamic `basePath`/`assetPrefix` for project-site deployments on GitHub Pages.
+
+## Project Structure
+
+```text
+app/            # App Router pages and layout
+components/     # UI sections (hero, projects, experience, etc.)
+public/assets/  # Images, gifs, resume PDF
+lib/            # Shared utilities
+```

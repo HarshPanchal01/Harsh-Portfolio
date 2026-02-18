@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Folder } from "lucide-react";
+import { ExternalLink, Folder, Tag } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
@@ -9,22 +9,9 @@ import { cn } from "@/lib/utils";
 
 const projects = [
   {
-    title: "JobFinder",
-    description: "Automated job search with Python and SerpApi to scrape Google Jobs, scheduled with GitHub Actions.",
-    link: "https://jobfinderautomation.xyz",
-    tech: ["Python", "SerpApi", "GitHub Actions"],
-    gifs: [
-      "/assets/AutomatedDiscoveryAnimationDark.gif",
-      "/assets/CleanWeeklyReportAnimationDark.gif",
-    ],
-    gifsLight: [
-      "/assets/AutomatedDiscoveryAnimationWhite.gif",
-      "/assets/CleanWeeklyReportAnimationWhite.gif",
-    ]
-  },
-  {
     title: "OneFinance",
-    description: "Engineered a local-first personal finance desktop application using Electron and Vue 3, prioritizing user privacy by persisting financial data strictly to an embedded SQLite database capable of querying 50,000+ records with sub-50ms latency. Architected a scalable state management system with Pinia to handle multi-account tracking, ensuring consistent ledger organization and instant search across 5+ years of history.",
+    description:
+      "Local-first finance desktop app built with Electron, Vue 3, and SQLite.",
     link: "#", // No link provided for desktop app, keeping placeholder or remove if needed
     tech: ["Electron", "Vue 3", "SQLite", "Pinia", "PrimeVue", "Tailwind CSS"],
     gifs: [
@@ -35,7 +22,6 @@ const projects = [
       "/assets/Filterbylable-ezgif.com-video-to-gif-converter.gif",
       "/assets/addCategories-ezgif.com-video-to-gif-converter.gif",
     ],
-    // Assuming same GIFs for light mode for OneFinance as none were specified, or just reuse same list
     gifsLight: [
       "/assets/createAccounts-ezgif.com-video-to-gif-converter.gif",
       "/assets/transactions-ezgif.com-video-to-gif-converter.gif",
@@ -43,7 +29,22 @@ const projects = [
       "/assets/Dashboard-ezgif.com-video-to-gif-converter.gif",
       "/assets/Filterbylable-ezgif.com-video-to-gif-converter.gif",
       "/assets/addCategories-ezgif.com-video-to-gif-converter.gif",
-    ]
+    ],
+  },
+  {
+    title: "JobFinder",
+    description:
+      "Automated job search with Python and SerpApi to scrape Google Jobs, scheduled with GitHub Actions.",
+    link: "https://jobfinderautomation.xyz",
+    tech: ["Python", "SerpApi", "GitHub Actions", "Docker"],
+    gifs: [
+      "/assets/AutomatedDiscoveryAnimationDark.gif",
+      "/assets/CleanWeeklyReportAnimationDark.gif",
+    ],
+    gifsLight: [
+      "/assets/AutomatedDiscoveryAnimationWhite.gif",
+      "/assets/CleanWeeklyReportAnimationWhite.gif",
+    ],
   },
 ];
 
@@ -61,20 +62,19 @@ export function Projects() {
   }
 
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="mb-12 font-mono text-3xl font-bold text-accent flex items-center gap-2">
-          <span className="text-syntax-keyword">&lt;</span>
-          Projects
-          <span className="text-syntax-keyword"> /&gt;</span>
+        <h2 className="mb-10 font-mono text-3xl font-bold text-syntax-shell">
+          &gt; Projects
+          <span aria-hidden="true" className="shell-cursor" />
         </h2>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
@@ -89,10 +89,19 @@ export function Projects() {
   );
 }
 
-function ProjectCard({ project, index, theme }: { project: any, index: number, theme: string | undefined }) {
+function ProjectCard({
+  project,
+  index,
+  theme,
+}: {
+  project: any;
+  index: number;
+  theme: string | undefined;
+}) {
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
   const isLight = theme === "light";
-  const gifList = isLight && project.gifsLight ? project.gifsLight : project.gifs;
+  const gifList =
+    isLight && project.gifsLight ? project.gifsLight : project.gifs;
 
   useEffect(() => {
     // Reset index when theme changes to ensure we don't go out of bounds if lists differ
@@ -118,13 +127,10 @@ function ProjectCard({ project, index, theme }: { project: any, index: number, t
       <Link
         href={project.link}
         target={project.link !== "#" ? "_blank" : "_self"}
-        className={cn(
-          "group relative flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card-bg transition-all hover:border-accent hover:shadow-lg hover:-translate-y-1",
-          project.link === "#" && "cursor-default"
-        )}
+        className="group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-lg border border-border bg-card-bg transition-all hover:-translate-y-1 hover:border-accent hover:shadow-lg"
       >
         {/* Image Container (GIFs) */}
-        <div className="relative h-56 w-full overflow-hidden bg-muted/10">
+        <div className="relative h-64 w-full overflow-hidden bg-muted/10 md:h-72">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={gifList[currentGifIndex]}
@@ -142,20 +148,22 @@ function ProjectCard({ project, index, theme }: { project: any, index: number, t
                 {project.title}
               </h3>
             </div>
-            {project.link !== "#" && (
-              <ExternalLink className="h-5 w-5 text-muted transition-colors group-hover:text-accent" />
-            )}
+            <ExternalLink className="h-5 w-5 text-muted transition-colors group-hover:text-accent" />
           </div>
 
-          <p className="mb-6 flex-1 font-mono text-sm leading-relaxed text-muted">
+          <p className="mb-6 line-clamp-2 font-mono text-sm leading-relaxed text-muted">
             {project.description}
           </p>
 
-          <div className="flex flex-wrap gap-2 mt-auto">
+          <div className="mt-auto flex flex-wrap items-center gap-2">
+            <Tag className="h-3.5 w-3.5 text-muted" />
             {project.tech.map((tech: string) => (
               <span
                 key={tech}
-                className="rounded bg-accent/10 px-2 py-1 font-mono text-xs text-accent"
+                className={cn(
+                  "rounded-md bg-muted/20 px-2 py-1 font-mono text-xs",
+                  techMeta[tech]?.className || "text-accent",
+                )}
               >
                 {tech}
               </span>
@@ -166,3 +174,36 @@ function ProjectCard({ project, index, theme }: { project: any, index: number, t
     </motion.div>
   );
 }
+
+const techMeta: Record<string, { className: string }> = {
+  Python: {
+    className: "text-syntax-string",
+  },
+  SerpApi: {
+    className: "text-syntax-function",
+  },
+  "GitHub Actions": {
+    className: "text-syntax-keyword",
+  },
+  Docker: {
+    className: "text-syntax-shell",
+  },
+  Electron: {
+    className: "text-syntax-number",
+  },
+  "Vue 3": {
+    className: "text-syntax-shell",
+  },
+  SQLite: {
+    className: "text-syntax-function",
+  },
+  Pinia: {
+    className: "text-syntax-string",
+  },
+  PrimeVue: {
+    className: "text-syntax-keyword",
+  },
+  "Tailwind CSS": {
+    className: "text-syntax-shell",
+  },
+};
