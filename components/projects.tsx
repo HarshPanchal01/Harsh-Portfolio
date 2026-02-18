@@ -14,21 +14,21 @@ const projects = [
       "Local-first finance desktop app built with Electron, Vue 3, and SQLite.",
     link: "https://github.com/HarshPanchal01/OneFinance",
     tech: ["Electron", "Vue 3", "SQLite", "Pinia", "PrimeVue", "Tailwind CSS"],
-    gifs: [
-      "/assets/createAccounts-ezgif.com-video-to-gif-converter.gif",
-      "/assets/transactions-ezgif.com-video-to-gif-converter.gif",
-      "/assets/viewanalytics-ezgif.com-video-to-gif-converter.gif",
-      "/assets/Dashboard-ezgif.com-video-to-gif-converter.gif",
-      "/assets/Filterbylable-ezgif.com-video-to-gif-converter.gif",
-      "/assets/addCategories-ezgif.com-video-to-gif-converter.gif",
+    videos: [
+      "/assets/createAccounts-ezgif.com-video-to-gif-converter.mp4",
+      "/assets/transactions-ezgif.com-video-to-gif-converter.mp4",
+      "/assets/viewanalytics-ezgif.com-video-to-gif-converter.mp4",
+      "/assets/Dashboard-ezgif.com-video-to-gif-converter.mp4",
+      "/assets/Filterbylable-ezgif.com-video-to-gif-converter.mp4",
+      "/assets/addCategories-ezgif.com-video-to-gif-converter.mp4",
     ],
-    gifsLight: [
-      "/assets/createAccounts-ezgif.com-video-to-gif-converter.gif",
-      "/assets/transactions-ezgif.com-video-to-gif-converter.gif",
-      "/assets/viewanalytics-ezgif.com-video-to-gif-converter.gif",
-      "/assets/Dashboard-ezgif.com-video-to-gif-converter.gif",
-      "/assets/Filterbylable-ezgif.com-video-to-gif-converter.gif",
-      "/assets/addCategories-ezgif.com-video-to-gif-converter.gif",
+    videosLight: [
+      "/assets/createAccounts-ezgif.com-video-to-gif-converter.mp4",
+      "/assets/transactions-ezgif.com-video-to-gif-converter.mp4",
+      "/assets/viewanalytics-ezgif.com-video-to-gif-converter.mp4",
+      "/assets/Dashboard-ezgif.com-video-to-gif-converter.mp4",
+      "/assets/Filterbylable-ezgif.com-video-to-gif-converter.mp4",
+      "/assets/addCategories-ezgif.com-video-to-gif-converter.mp4",
     ],
   },
   {
@@ -37,13 +37,13 @@ const projects = [
       "Automated job search with Python and SerpApi to scrape Google Jobs, scheduled with GitHub Actions.",
     link: "https://jobfinderautomation.xyz",
     tech: ["Python", "SerpApi", "GitHub Actions", "Docker"],
-    gifs: [
-      "/assets/AutomatedDiscoveryAnimationDark.gif",
-      "/assets/CleanWeeklyReportAnimationDark.gif",
+    videos: [
+      "/assets/AutomatedDiscoveryAnimationDark.mp4",
+      "/assets/CleanWeeklyReportAnimationDark.mp4",
     ],
-    gifsLight: [
-      "/assets/AutomatedDiscoveryAnimationWhite.gif",
-      "/assets/CleanWeeklyReportAnimationWhite.gif",
+    videosLight: [
+      "/assets/AutomatedDiscoveryAnimationWhite.mp4",
+      "/assets/CleanWeeklyReportAnimationWhite.mp4",
     ],
   },
 ];
@@ -56,10 +56,6 @@ export function Projects() {
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <section id="projects" className="py-16">
@@ -75,14 +71,22 @@ export function Projects() {
         </h2>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              project={project}
-              index={index}
-              theme={resolvedTheme || theme}
-            />
-          ))}
+          {mounted ? (
+            projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                project={project}
+                index={index}
+                theme={resolvedTheme || theme}
+              />
+            ))
+          ) : (
+            // Skeleton / Placeholder to prevent layout shift
+            <>
+              <div className="h-[450px] rounded-lg border border-border bg-card-bg/50 animate-pulse" />
+              <div className="h-[450px] rounded-lg border border-border bg-card-bg/50 animate-pulse" />
+            </>
+          )}
         </div>
       </motion.div>
     </section>
@@ -98,23 +102,23 @@ function ProjectCard({
   index: number;
   theme: string | undefined;
 }) {
-  const [currentGifIndex, setCurrentGifIndex] = useState(0);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const isLight = theme === "light";
-  const gifList =
-    isLight && project.gifsLight ? project.gifsLight : project.gifs;
+  const videoList =
+    isLight && project.videosLight ? project.videosLight : project.videos;
 
   useEffect(() => {
-    // Reset index when theme changes to ensure we don't go out of bounds if lists differ
-    setCurrentGifIndex(0);
+    // Reset index when theme changes
+    setCurrentVideoIndex(0);
   }, [isLight]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentGifIndex((prev) => (prev + 1) % gifList.length);
-    }, 4000); // Change GIF every 4 seconds
+      setCurrentVideoIndex((prev) => (prev + 1) % videoList.length);
+    }, 4000); // Change Video every 4 seconds
 
     return () => clearInterval(interval);
-  }, [gifList.length]);
+  }, [videoList.length]);
 
   return (
     <motion.div
@@ -129,12 +133,15 @@ function ProjectCard({
         target={project.link !== "#" ? "_blank" : "_self"}
         className="group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-lg border border-border bg-card-bg transition-all hover:-translate-y-1 hover:border-accent hover:shadow-lg"
       >
-        {/* Image Container (GIFs) */}
+        {/* Image Container (Videos) */}
         <div className="relative h-64 w-full overflow-hidden bg-muted/10 md:h-72">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={gifList[currentGifIndex]}
-            alt={`${project.title} preview`}
+          <video
+            key={videoList[currentVideoIndex]}
+            src={videoList[currentVideoIndex]}
+            autoPlay
+            loop
+            muted
+            playsInline
             className="object-cover w-full h-full transition-opacity duration-500"
           />
         </div>
