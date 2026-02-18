@@ -149,7 +149,7 @@ export function ParticleJava() {
     // Load the reference image and sample points
     const img = new Image();
     img.crossOrigin = "anonymous";
-    img.src = "/assets/image.png";
+    img.src = "/assets/java.png";
 
     img.onload = () => {
       if (particlesRef.current.length === 0) {
