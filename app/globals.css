@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  /* Night Owl Light */
+  --background: #fbfbfb; /* Light background from screenshot/repo */
+  --foreground: #2f3443; /* Darker gray text for better readability */
+  --accent: #4876d6; /* Blue for functions/links */
+  --accent-hover: #2c56a8;
+  --muted: #6f788d; /* Darker muted text for contrast */
+  --card-bg: #fbfbfb;
+  --border: #d6deeb; /* Light border */
+
+  /* Syntax Highlighting */
+  --color-keyword: #994cc3; /* Purple for keywords (class, const) */
+  --color-string: #c96765; /* Red/Orange for strings */
+  --color-function: #4876d6; /* Blue for functions */
+  --color-number: #aa0982; /* Pink/Purple for numbers */
+  --color-comment: #989fb1; /* Gray for comments */
+  --color-shell: #d6455d; /* Stronger rose-red for shell commands in light mode */
+}
+
+.dark {
+  /* Night Owl Dark */
+  --background: #011627; /* Deep blue background */
+  --foreground: #d6deeb; /* Light blue-gray text */
+  --accent: #82aaff; /* Light blue for functions/links */
+  --accent-hover: #6290ff;
+  --muted: #637777; /* Comment gray-green */
+  --card-bg: #011627;
+  --border: #5f7e97; /* Blue-gray border */
+
+  /* Syntax Highlighting */
+  --color-keyword: #c792ea; /* Purple for keywords */
+  --color-string: #ecc48d; /* Yellow/Gold for strings */
+  --color-function: #82aaff; /* Blue for functions */
+  --color-number: #f78c6c; /* Orange for numbers */
+  --color-comment: #637777; /* Gray-green for comments */
+  --color-shell: #7ece6a; /* Night Owl inspired green for shell commands in dark mode */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-card-bg: var(--card-bg);
+  --color-border: var(--border);
+
+  --color-syntax-keyword: var(--color-keyword);
+  --color-syntax-string: var(--color-string);
+  --color-syntax-function: var(--color-function);
+  --color-syntax-number: var(--color-number);
+  --color-syntax-comment: var(--color-comment);
+  --color-syntax-shell: var(--color-shell);
+
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jetbrains-mono), monospace;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+@keyframes shell-cursor-fade-slow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.shell-cursor {
+  display: inline-block;
+  width: 0.55ch;
+  height: 1em;
+  margin-left: 0.25rem;
+  vertical-align: -0.15em;
+  background-color: currentColor;
+  animation: shell-cursor-fade-slow 3.2s ease-in-out infinite !important;
+  will-change: opacity;
+}
